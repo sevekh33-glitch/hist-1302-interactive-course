@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HIST 1302 · Interactive U.S. History Survey Since 1876</title>
+  <meta name="description" content="An interactive survey course of U.S. History since 1876: videos, games, primary sources, quizzes and an AI tutor. Free and open source.">
+  <meta property="og:title" content="HIST 1302 · Interactive U.S. History Survey">
+  <meta property="og:description" content="Videos, games, primary sources, instant quizzes and an AI tutor — a free, open-source interactive history course.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231f3a5f'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' font-weight='bold' fill='%23d9a441' text-anchor='middle'%3EH%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#/">
+        <span class="brand-mark">H</span>
+        <span class="brand-text">
+          <strong>HIST 1302</strong>
+          <small>U.S. History Since 1876</small>
+        </span>
+      </a>
+      <nav class="nav" id="mainnav">
+        <a href="#/" data-nav="home">Home</a>
+        <a href="#/modules" data-nav="modules">Modules</a>
+        <a href="#/progress" data-nav="progress">My Progress</a>
+        <button class="btn btn-gold btn-sm" id="navAskAI" type="button">Ask the AI Tutor</button>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu" type="button">☰</button>
+    </div>
+    <div class="course-progress-line"><div class="course-progress-fill" id="courseProgressFill"></div></div>
+  </header>
+
+  <main id="app" aria-live="polite"></main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <strong>HIST 1302 · Interactive Survey of U.S. History Since 1876</strong>
+        <p>An open-source teaching project. Content is free to use, fork and adapt under the MIT license.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#/modules">Modules</a>
+        <a href="#/progress">Progress</a>
+        <a href="https://github.com/" target="_blank" rel="noopener" id="repoLink">Source on GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- AI Tutor floating widget -->
+  <div id="tutor-root"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/tutor.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
